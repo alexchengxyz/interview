@@ -118,6 +118,33 @@ JavaScript 原型和原型鏈是實現繼承的重要機制，通過原型鏈，
 
 ## React
 
+### React 生命週期
+
+Mount -> Update -> Unmount
+
+- Mount 創建: 元件被渲染到畫面上。
+- Update 更新: 元件的內容因為資料的更動而重新渲染。
+- Unmount 銷毀: 件從畫面上消失，移除這個元件。
+
+- Mount
+1. constructor：初始化狀態和綁定方法。
+1. getDerivedStateFromProps：接收新的 props 後更新狀態。
+1. render：渲染組件。
+1. componentDidMount：當組件被渲染到 DOM 中時觸發。
+
+- Update
+1. getDerivedStateFromProps：接收新的 props 後更新狀態。
+1. shouldComponentUpdate：決定是否需要重新渲染組件。
+1. render：渲染組件。
+1. getSnapshotBeforeUpdate：在更新前獲取 DOM 狀態。
+1. componentDidUpdate：在更新後觸發，通常用於獲取新的 props 或更新 DOM。
+
+- Unmount
+componentWillUnmount：在組件卸載之前觸發，用於清除定時器或取消請求等操作。
+
+useState：用於在組件中添加狀態，取代了類組件中的 constructor 和 setState 方法。
+useEffect：用於在組件中執行副作用，取代了類組件中的 componentDidMount、componentDidUpdate 和 componentWillUnmount 方法。
+
 ### useMemo 是什麼？有什麼特性
 用於優化性能，當需要根據某些數據計算出一個新的值時，如果每次渲染都重新計算這個值，會對應用的性能造成一定的影響。useMemo 可以快取計算結果，避免重複計算，從而提高應用的性能。
 
