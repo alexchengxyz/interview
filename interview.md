@@ -213,3 +213,33 @@ componentWillUnmount：在組件卸載之前觸發，用於清除定時器或取
 ### css 權重優先順序
 
 !important > inline style > ID > Class/psuedo-class(偽類)/attribute（屬性選擇器） > Element
+
+### 給div 如何置中 幾種方式
+ˋˋˋcss
+.center {
+  width: 50%; /* 假設 div 寬度為 50% */
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 假設要將 div 置中於視窗垂直方向 */
+}
+
+.center {
+  /* 可以不指定寬度 */
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh; /* 假設要將 div 置中於視窗垂直方向 */
+}
+
+.center {
+  /* 可以不指定寬度 */
+}
+ˋˋˋ
+
