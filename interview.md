@@ -215,7 +215,7 @@ componentWillUnmount：在組件卸載之前觸發，用於清除定時器或取
 !important > inline style > ID > Class/psuedo-class(偽類)/attribute（屬性選擇器） > Element
 
 ### 給div 如何置中 幾種方式
-ˋˋˋcss
+```css
 .center {
   width: 50%; /* 假設 div 寬度為 50% */
   margin: 0 auto;
@@ -241,5 +241,5 @@ componentWillUnmount：在組件卸載之前觸發，用於清除定時器或取
 .center {
   /* 可以不指定寬度 */
 }
-ˋˋˋ
+```
 
